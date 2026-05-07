@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Directions for DFS (students must use these)
+// Directions for DFS (students must use thes
 int dr[4] = {-1, 0, 1, 0};
 int dc[4] = {0, 1, 0, -1};
 
