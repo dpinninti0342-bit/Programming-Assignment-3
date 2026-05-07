@@ -134,8 +134,8 @@ bool dfs(int r, int c,
         return false;
     }
 
-    if (visited[r][c] == true) {
-        return false;
+    if (visited[r][c]) {
+    return false;
     }
 
     visited[r][c] = true;
@@ -149,7 +149,7 @@ bool dfs(int r, int c,
         int nc = c + dc[i];
 
         if (nr >= 0 && nr < N && nc >= 0 && nc < M) {
-            if (maze[nr][nc] == 0 && visited[nr][nc] == false) {
+            if (maze[nr][nc] == 0 && !visited[nr][nc]) {
                 parent_r[nr][nc] = r;
                 parent_c[nr][nc] = c;
 
