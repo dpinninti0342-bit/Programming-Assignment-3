@@ -97,7 +97,6 @@ void printPath(pair<int,int> exitcell,
 
     vector<pair<int,int>> path;
 
-    // Walk backward from exit to entrance
     while (!(r == ent_r && c == ent_c)) {
         path.push_back({r, c});
         int pr = parent_r[r][c];
@@ -177,7 +176,6 @@ int main() {
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
 
-    // Pick entrance and exit
     pair<int,int> entrance = chooseBoundaryCell(maze);
     pair<int,int> exitcell = chooseBoundaryCell(maze);
 
